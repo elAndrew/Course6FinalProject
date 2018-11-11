@@ -1,7 +1,9 @@
 ---
 title: "Central Limit Theorem and Inferential Data Analysis"
 author: "Andrew Witherspoon"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -102,7 +104,7 @@ VC <-  ToothGrowth$len[ToothGrowth$supp=="VC"]
 t.test(OJ, VC, alternative = "two.sided", conf.level = .95)$conf.int
 ```
 
-The 95% confidnce interval contains the value 0, therefore we cannot reject the null hypothesis.  The data does not show that tooth length is affected by supplement type.
+The 95% confidence interval contains the value 0, therefore we cannot reject the null hypothesis.  The data does not show that tooth length is affected by supplement type.
 
 Let's do the same type of hypothesis testing based on dose:
 ```{r, fig.align='center', fig.height=2, echo=FALSE}
@@ -112,7 +114,7 @@ dose0.5 <-  ToothGrowth$len[ToothGrowth$dose==0.5]
 dose1 <-  ToothGrowth$len[ToothGrowth$dose==1]
 dose2 <-  ToothGrowth$len[ToothGrowth$dose==2]
 ```
-A dose of 0.5 and a dose of 2 have the largest mean difference, so let's use these values for our hypothesis testing.  Once again, our null hypothesis will be that the mean of dose0.5 and the mean of dose2 are not differnt.
+A dose of 0.5 and a dose of 2 have the largest mean difference, so let's use these values for our hypothesis testing.  Once again, our null hypothesis will be that the mean of dose0.5 and the mean of dose2 are not different.
 ```{r}
 t.test(dose0.5, dose2, alternative = "two.sided", conf.level = .95)$conf.int
 ```
