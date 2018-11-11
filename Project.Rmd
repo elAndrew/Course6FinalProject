@@ -119,6 +119,7 @@ A dose of 0.5 and a dose of 2 have the largest mean difference, so let's use the
 t.test(dose0.5, dose2, alternative = "two.sided", conf.level = .95)$conf.int
 ```
 We can reject the null hypothesis, as the confidence interval does not contain 0.  With 95% confidence, the data shows that the dose does have an effect on tooth length.
+<br><br><br><br><br>
 
 
-**Full markdown document code available at:** <https://github.com/elAndrew/Course6FinalProject/blob/master/Project.Rmd>
+[Link for full markdown document code](https://github.com/elAndrew/Course6FinalProject/blob/master/Project.Rmd)
